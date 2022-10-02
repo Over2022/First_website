@@ -6,6 +6,5 @@ def index(request):
     return HttpResponse('<h4>Hello<h4>')
 
 
-def detail(request):
-    return HttpResponse('<BLOCKQUOTE>My first project<BLOCKQUOTE>'
-                        '<p>My first project<p>')
+def about(request):
+    return render(request, 'about.html')
