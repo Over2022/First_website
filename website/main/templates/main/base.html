@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
+    <ul class="navbar-nav mr-auto">
+
+        <span class="fs-4" style="color: aqua">IT OVERONE</span>
+        <a class="nav-link" href="{% url 'home'%}"><ya-tr-span>Главная страница</ya-tr-span></a>
+        <a class="nav-link" href="{% url 'about'%}"><ya-tr-span>О нас</ya-tr-span></a>
+    </ul>
+</nav>
+<br>
+<br>
+<br>
+<font color="grey">
+    <div class="container">
+{% block content %}{% endblock %}
+    <font>
+        <font color="black">
+{% block text %}{% endblock %}
+            <font>
+                </div>
+</body>
+</html>
