@@ -4,15 +4,21 @@
 {{ title }}
 {% endblock %}
 
+
 {% block content %}
-<H1>Главная страница</H1>
-{% for q in tasks %}
+    <H1>Главная страница</H1>
+{% if tasks %}
+    {% for q in tasks %}
 <div class="alert alert-warning mt-2">
 <h3>{{ q.title }}</h3>
     <p>{{ q.task }}</p>
     </div>
-{% endfor %}
+    {% endfor %}
+{% else %}
+    <p>Пусто</p>
+{% endif %}
 {% endblock %}
+
 
 {% block text %}
 {% load static %}
