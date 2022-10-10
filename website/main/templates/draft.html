@@ -1,0 +1,61 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Страница о нас
+{% endblock %}
+
+{% block content %}
+<H1>Создать сообщение</H1>
+<form method="post">
+  <input type="text" class="form-control" placeholder="Введите ваше имя">
+ <br>
+ <textarea type="text" class="form-control" placeholder="Введите сообщение *" rows="8" required="required" ></textarea>
+ <br>
+</form>
+
+
+<style>
+.btn-grd-danger,
+.btn-grd-disabled
+ {
+ background-size: 200% auto;
+ -webkit-transition: 0.5s ease-in-out;
+ transition: 0.5s ease-in-out;
+ color: #fff;
+}
+.btn-grd-danger:hover
+{
+ background-position: right center;
+}
+
+.btn-grd-disabled.hor-grd
+{
+ background-size: auto 200%;
+}
+
+.btn-grd-disabled.hor-grd:hover
+{
+ background-position: bottom center;
+}
+
+
+
+.btn-grd-danger {
+ background-image: -webkit-gradient(linear, left top, right top, from(#ff8585), color-stop(51%, #ff1515), to(#ff8585));
+ background-image: linear-gradient(to right, #ff8585 0%, #ff1515 51%, #ff8585 100%);
+}
+
+.btn-grd-disabled.hor-grd {
+ background-image: -webkit-gradient(linear, left bottom, left top, from(#77aaff), color-stop(51%, #0764ff), to(#77aaff));
+ background-image: linear-gradient(to top, #77aaff 0%, #0764ff 51%, #77aaff 100%);
+}
+</style>
+<div class="container text-center">
+<button class="btn waves-effect waves-light btn-grd-danger"> Удалить </button>
+<button class="btn waves-effect waves-light hor-grd btn-grd-disabled btn-disabled disabled">Отправить</button>
+</div>
+{% endblock %}
+
+
+{% block text %}
+{% endblock %}
