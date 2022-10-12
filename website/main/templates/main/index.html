@@ -17,6 +17,7 @@
 {% else %}
     <p>Пусто</p>
 {% endif %}
+{% load static %}
 {% endblock %}
 
 
@@ -26,8 +27,11 @@
 <div class="alert alert-info mt-2">
 <p>{{ q.title }}</p>
 <p>{{ q.main }}</p>
+<p><img src="{% static main.img %}"></p>
     </div>
+
 <p>{{ q.data }}</p>
+
 
 {% endfor %}
 {% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+Страница о нас
+{% endblock %}
+
+{% block content %}
+<H1>Создать сообщение</H1>
+<form method="post">
+    {% csrf_token %}
+  <input type="text" class="form-control" placeholder="Введите ваше имя">
+ <br>
+ <textarea type="text" class="form-control" placeholder="Введите сообщение *" rows="8" required="required" ></textarea>
+ <br>
+
+
+<div class="container text-center">
+<button type="reset" class="btn waves-effect waves-light btn-grd-danger "> Удалить </button>
+    <button class="btn waves-effect waves-light hor-grd btn-grd-primary ">Отправить</button>
+
+
+</div>
+    </form>
+{% endblock %}
+
+
+{% block text %}
+{% endblock %}
