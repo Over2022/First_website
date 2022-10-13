@@ -9,6 +9,11 @@
 <H1>Создать сообщение</H1>
 <form method="post">
     {% csrf_token %}
+    {{ form_2.title }}<br>
+    <br>
+    {{ form_2.body }}<br>
+    {{ form.title }}<br>
+    {{ form.main }}<br>
   <input type="text" class="form-control" placeholder="Введите ваше имя">
  <br>
  <textarea type="text" class="form-control" placeholder="Введите сообщение *" rows="8" required="required" ></textarea>
