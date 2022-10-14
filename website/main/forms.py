@@ -1,6 +1,6 @@
 from django import forms
-from .models import Task, Main
-from django.forms import ModelForm, TextInput
+from .models import Task, Main, Registration
+from django.forms import ModelForm, TextInput, Textarea
 
 
 class TaskForm(ModelForm):
@@ -8,7 +8,7 @@ class TaskForm(ModelForm):
         model = Task  # указываю с какой моделью работаю
         fields = ['title', 'task']
         widgets = {'title': TextInput(attrs={'class': "form-control", "placeholder": "Введите название"}),
-                   'task': TextInput(attrs={'class': "form-control", "placeholder": "Введите описание"})}
+                   'task': Textarea(attrs={'class': "form-control", "placeholder": "Введите описание"})}
 
 
 class MainForm(ModelForm):
@@ -24,3 +24,15 @@ class DraftForm(forms.Form):
                             widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите имя'}))
 
     body = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Введите сообщение'}))
+
+
+class RegistrationForm(ModelForm):
+    class Meta:
+        model = Registration
+        fields = ['name', 'surname', 'mail', 'password', 'password_2']
+        widgets = {'name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Имя', 'style': 'width:200px'}),
+                   'surname': TextInput(attrs={'class': 'form-control', 'placeholder': 'Фамилия','style': 'width:200px'}),
+                   'mail': TextInput(attrs={'class': 'form-control', 'placeholder': 'E-mail', 'style': 'width:400px'}),
+                   'password': TextInput(attrs={'class': 'form-control', 'placeholder': '••••••••', 'style': 'width:400px'}),
+                   'password_2': TextInput(attrs={'class': 'form-control', 'placeholder': '••••••••', 'style': 'width:400px'})}
+

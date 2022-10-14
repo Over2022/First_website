@@ -4,6 +4,7 @@ from .models import Task, Main
 from .forms import TaskForm
 from .forms import MainForm
 from .forms import DraftForm
+from .forms import RegistrationForm
 
 
 def index(request):
@@ -29,3 +30,9 @@ def draft(request):
     form_2 = DraftForm()
     context = {'form': form, 'form_2': form_2}
     return render(request, 'draft.html', context)
+
+
+def registration(request):
+    form = RegistrationForm()
+    context = {'form': form}
+    return render(request, 'main/registration.html', context)

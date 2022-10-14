@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="p-3 mb-2 bg-light text-dark">
 <H1>Создать сообщение</H1>
 <form method="post">
     {% csrf_token %}
@@ -27,6 +28,7 @@
 
 </div>
     </form>
+    </div>
 {% endblock %}
 
 

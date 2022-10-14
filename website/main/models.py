@@ -21,3 +21,11 @@ class Main(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Registration(models.Model):
+    name = models.CharField('Имя', max_length=10)
+    surname = models.CharField('Фамилия', max_length=10)
+    mail = models.CharField('E-mail', max_length=20)
+    password = models.CharField('Пароль', max_length=20)
+    password_2 = models.CharField('Пароль', max_length=20)
